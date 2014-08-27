@@ -67,7 +67,7 @@ class PlgFabrik_FormJUser extends plgFabrik_Form
 	protected $blockfield = '';
 
 	/**
-	 * Get an element name
+	 * Get an element nameif ($groupElementClass !== 'PlgFabrik_ElementUsergroup')
 	 *
 	 * @param   string  $pname  Params property name to look up
 	 * @param   bool    $short  Short (true) or full (false) element name, default false/full
@@ -235,7 +235,7 @@ class PlgFabrik_FormJUser extends plgFabrik_Form
 							$groupElementClass = get_class($groupElement);
 							$gid = $user->groups;
 
-							if ($groupElementClass !== 'PlgFabrik_ElementUsergroup' && $groupElementClass !== 'PlgFabrik_ElementCheckbox' && $groupElementClass !== 'PlgFabrik_ElementDropdown' && $groupElementClass !== 'PlgFabrik_ElementPicklist')
+							if ($groupElementClass !== 'PlgFabrik_ElementUsergroup')
 							{
 								$gid = array_shift($gid);
 							}
